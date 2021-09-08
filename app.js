@@ -17,7 +17,7 @@ function closeMenu() {
     navMenu.classList.remove("active");
 }
 
-
+// For password
 const togglePassword = document.querySelector('#togglePassword');
 const password = document.querySelector('#password');
 
@@ -28,3 +28,12 @@ togglePassword.addEventListener('click', function (e) {
     // toggle the eye / eye slash icon
     this.classList.toggle('bi-eye');
 });
+
+function myFunction() {
+    var x = document.getElementById("dash");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }

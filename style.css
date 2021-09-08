@@ -16,7 +16,7 @@ a{
 
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 55px;
     width: 100%;
@@ -25,9 +25,6 @@ header{
 }
 .left{
     padding-left: 40px;
-}
-.right{
-    padding-right: 100px;
 }
 .right ul li{
     display: inline-block;
@@ -277,13 +274,13 @@ form div section p{
     justify-content: space-between;
 }
 .dash-left h1{
-    font-size: 30px;
+    font-size: 40px;
     height: 10%;
     width: 95%;
     text-align: center;
     margin-top: 1em;
     background-color: #02629C;
-    background: linear-gradient(180deg, #0096D7 10%, #E0E0E0 40%);
+    background: linear-gradient(180deg, #0096D7 20%, #E0E0E0 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
@@ -366,7 +363,7 @@ nav ul li a:hover, .currentPage{
     font-size: 35px;
     margin-top: 1em;
     background-color: #02629C;
-    background: linear-gradient(180deg, #0096D7 10%, #E0E0E0 110%);
+    background: linear-gradient(180deg, #0096D7 20%, #E0E0E0 110%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
@@ -379,7 +376,7 @@ nav ul li a:hover, .currentPage{
     display: flex;
     align-self: flex-end;
     justify-self: flex-end;
-    margin: .8em;
+    margin: 1.5em;
     margin-top: 0;
 }
 .mid2{
@@ -459,9 +456,56 @@ nav ul li a:hover, .currentPage{
 
 
 
+/* LANDING PAGE */ 
+.lp-btn{
+    width: 175%;
+    padding: .8em;
+    color: var(--RC);
+    background-color: var(--PC);
+    border-radius: 1.5em;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.lp-container{
+    width: 100vw;
+    height: 93.5vh;
+    overflow: hidden;
+    background: linear-gradient(110.65deg, #89D3F3 0.96%, rgba(255, 255, 255, 0.9) 99.66%);
+    display: flex;
+    justify-content: space-evenly;
+}
+.lp-txt{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 3em;
+    color: var(--RC);
+    font-size: 20px;
+}
+.lp-txt span{
+    font-size: 60px;
+}
+.btn2{
+    font-size: 14px;
+    color: var(--RC);
+    background-color: transparent;
+    width: 170%;
+    transition: .4s ease;
+}
+.btn2:hover, .lp-btn:hover{
+    color: white;
+    background-color: var(--RC);
+    border: 2px solid var(--RC);
+}
 
-
-
+.lp-img{
+    width: 40%;
+    height: 70vh;
+    margin-top: 2em;
+}
 
 
 @media (max-width: 950px){
@@ -473,9 +517,9 @@ nav ul li a:hover, .currentPage{
         padding-right: 2em;
     }
 
-    .right ul {
+    .nav-menu{
         position: fixed;
-        left: -100%;
+        left: -200%;
         top: 3em;
         display: flex;
         flex-direction: column;
@@ -493,7 +537,7 @@ nav ul li a:hover, .currentPage{
         font-weight: 800;
         margin: 1.7em 0;
     }
-    .nav-menu.active {
+    .nav-menu.active{
         left: 0;
     }
 
@@ -545,4 +589,76 @@ nav ul li a:hover, .currentPage{
         margin: auto;
     }
 
+    /* dashboard */
+    .hamdash{
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        z-index: 99999999;
+    }
+    .dash-middle{
+        width: 100%;
+        z-index: 0;
+    }
+    .mid2 h3{
+        width: 85%;
+        margin: 1em;
+        font-size: 35px;
+    }
+    .mid2 p{
+        margin: 0 0 1em 1em;
+    }
+    .dash-right, .dash-left{
+        display: none;
+    }
+    .dash-left{
+        width: 80%;
+        padding-left: 2em;
+        position: absolute;
+        background-color: var(--PC);
+        justify-items: center;
+        align-items: center;
+        z-index: 9999;
+        opacity: .95;
+        border-radius: 0;
+    }
+    #below{
+        width: 90%;
+        margin: auto;
+    }
+
+    /* LANDING PAGE */ 
+    .lp-ham{
+        position: absolute;
+        left: 32px;
+        top: 10px;
+    }
+    .lp-btn{
+        width: 45%;
+        padding: 1em;
+    }
+    .lp-container{
+        background: linear-gradient(110.65deg, #97d5ef 0.96%, rgba(255, 255, 255, 0.9) 99.66%) , url(./images/LandingPageImage.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .lp-txt{
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+    }
+    .lp-txt span{
+        font-size: 60px;
+    }
+    .bk{
+        display: none;
+    }
+    .btn2{
+        font-size: 16px;
+        width: 120%;
+        transition: .4s ease-in-out;
+    }
+    .lp-img img{
+        display: none;
+    }
 }
